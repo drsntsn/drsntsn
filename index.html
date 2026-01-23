@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknoloji & Güvenlik Çözümleri | Çayırhan - Edremit</title>
+    <style>
+        :root {
+            --primary: #2c3e50; /* Koyu Mavi - Güven */
+            --accent: #e67e22;  /* Turuncu - Enerji/İş */
+            --light: #ecf0f1;
+            --text: #333;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); }
+        
+        /* Header */
+        header { background: var(--primary); color: white; padding: 1rem 0; text-align: center; }
+        header h1 { margin: 0; font-size: 1.8rem; }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?technology,security');
+            background-size: cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .btn {
+            display: inline-block; background: var(--accent); color: white; padding: 10px 25px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        /* Hizmetler Grid */
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card {
+            background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;
+        }
+        .card h3 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px;}
+
+        /* Footer */
+        footer { background: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        
+        /* Responsive */
+        @media (max-width: 600px) { .hero h2 { font-size: 1.8rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="padding: 0;">
+            <h1>[Firma Adınız] Teknoloji</h1>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Güvenliğiniz ve Dijital Varlığınız Bize Emanet</h2>
+        <p>Ankara Çayırhan ve Balıkesir Edremit bölgesinde profesyonel çözüm ortağınız.</p>
+        <a href="#iletisim" class="btn">Hemen Teklif Alın</a>
+    </section>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 30px;">Hizmetlerimiz</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Güvenlik Sistemleri</h3>
+                <p>7/24 kayıt, uzaktan izleme ve akıllı hareket algılama sistemleri ile eviniz ve iş yeriniz koruma altında.</p>
+            </div>
+            <div class="card">
+                <h3>Web Tasarım</h3>
+                <p>İşletmenizi dijital dünyaya taşıyan, Google uyumlu ve modern web siteleri tasarlıyoruz.</p>
+            </div>
+            <div class="card">
+                <h3>Otomasyon</h3>
+                <p>Akıllı ev sistemleri, personel takip yazılımları ve özel endüstriyel çözümler.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="iletisim" style="background: var(--light); padding: 40px 20px; text-align: center;">
+        <h2>İletişime Geçin</h2>
+        <p>Projenizi konuşmak için bizi arayın veya WhatsApp'tan yazın.</p>
+        <p><strong>Telefon:</strong> 0555 XXX XX XX</p>
+        <p><strong>E-posta:</strong> info@firmaadiniz.com</p>
+        <p><em>Hizmet Bölgeleri: Ankara (Çayırhan) - Balıkesir (Edremit/Akçay)</em></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Firma Adınız]. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
