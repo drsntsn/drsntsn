@@ -1,101 +1,152 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teknoloji & Güvenlik Çözümleri | Çayırhan - Edremit</title>
-    <style>
-        :root {
-            --primary: #2c3e50; /* Koyu Mavi - Güven */
-            --accent: #e67e22;  /* Turuncu - Enerji/İş */
-            --light: #ecf0f1;
-            --text: #333;
-        }
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); }
-        
-        /* Header */
-        header { background: var(--primary); color: white; padding: 1rem 0; text-align: center; }
-        header h1 { margin: 0; font-size: 1.8rem; }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?technology,security');
-            background-size: cover;
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
-        .btn {
-            display: inline-block; background: var(--accent); color: white; padding: 10px 25px; 
-            text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px;
-            transition: transform 0.2s;
-        }
-        .btn:hover { transform: scale(1.05); }
-
-        /* Hizmetler Grid */
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card {
-            background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;
-        }
-        .card h3 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px;}
-
-        /* Footer */
-        footer { background: var(--primary); color: white; text-align: center; padding: 20px; margin-top: 40px; }
-        
-        /* Responsive */
-        @media (max-width: 600px) { .hero h2 { font-size: 1.8rem; } }
-    </style>
+    <title>NODUS - Teknoloji & Güvenlik Çözümleri</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-<nav style="background: #333; padding: 15px; text-align: center;">
-    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Ana Sayfa</a>
-    <a href="hakkimizda.html" style="color: white; margin: 0 15px; text-decoration: none;">Hakkımızda</a>
-    <a href="navbar.html" style="color: white; margin: 0 15px; text-decoration: none;">İletişim</a>
-</nav>
+
+    <!-- Header -->
     <header>
-        <div class="container" style="padding: 0;">
-            <h1>[Firma Adınız] Teknoloji</h1>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="nodus.png" alt="NODUS Logo">
+                    <span>NODUS</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#home" class="active">Ana Sayfa</a>
+                    <a href="#services">Hizmetler</a>
+                    <a href="#about">Hakkımızda</a>
+                    <a href="#contact">İletişim</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h2>Güvenliğiniz ve Dijital Varlığınız Bize Emanet</h2>
-        <p>Ankara Çayırhan ve Balıkesir Edremit bölgesinde profesyonel çözüm ortağınız.</p>
-        <a href="#iletisim" class="btn">Hemen Teklif Alın</a>
-    </section>
-
-    <div class="container">
-        <h2 style="text-align: center; margin-bottom: 30px;">Hizmetlerimiz</h2>
-        <div class="services">
-            <div class="card">
-                <h3>Güvenlik Sistemleri</h3>
-                <p>7/24 kayıt, uzaktan izleme ve akıllı hareket algılama sistemleri ile eviniz ve iş yeriniz koruma altında.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-accordion">
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Dijital Kalkanınız</h2>
+                    <p>Güvenliğiniz bizim önceliğimiz.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Web Tasarım</h3>
-                <p>İşletmenizi dijital dünyaya taşıyan, Google uyumlu ve modern web siteleri tasarlıyoruz.</p>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Geleceği Kodluyoruz</h2>
+                    <p>Web dünyasında iz bırakın.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Otomasyon</h3>
-                <p>Akıllı ev sistemleri, personel takip yazılımları ve özel endüstriyel çözümler.</p>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Akıllı Yaşam</h2>
+                    <p>Eviniz size itaat etsin.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Gözünüz Arkada Kalmasın</h2>
+                    <p>7/24 Kesintisiz Gözetim.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Sınırları Zorlayın</h2>
+                    <p>Teknolojinin zirvesine yolculuk.</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <section id="iletisim" style="background: var(--light); padding: 40px 20px; text-align: center;">
-        <h2>İletişime Geçin</h2>
-        <p>Projenizi konuşmak için bizi arayın veya WhatsApp'tan yazın.</p>
-        <p><strong>Telefon:</strong> 0555 XXX XX XX</p>
-        <p><strong>E-posta:</strong> info@firmaadiniz.com</p>
-        <p><em>Hizmet Bölgeleri: Ankara (Çayırhan) - Balıkesir (Edremit/Akçay)</em></p>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hizmetlerimiz</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Güvenlik Sistemleri</h3>
+                    <p>7/24 kayıt, uzaktan izleme, plaka tanıma ve yapay zeka destekli analiz sistemleri ile eviniz ve
+                        iş yeriniz tam koruma altında.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Web Tasarım & Yazılım</h3>
+                    <p>İşletmenizi dijital dünyaya taşıyan, SEO uyumlu, hızlı ve estetik web siteleri ve özel yazılım
+                        çözümleri üretiyoruz.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3>Otomasyon & Akıllı Ev</h3>
+                    <p>Hayatınızı kolaylaştıran akıllı ev sistemleri, personel takip yazılımları ve endüstriyel
+                        otomasyon çözümleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>İletişime Geçin</h2>
+                <p>Projenizi hayata geçirmek için bir kahve içmeye ne dersiniz? Hemen bize ulaşın.</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0555 XXX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nodus.com.tr</span>
+                    </div>
+                </div>
+
+                <a href="mailto:info@nodus.com.tr" class="cta-btn">Mesaj Gönder</a>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 [Firma Adınız]. Tüm hakları saklıdır.</p>
+        <div class="container">
+            <p>&copy; 2026 NODUS Teknoloji. Tüm hakları saklıdır.</p>
+        </div>
     </footer>
 
 </body>
+
 </html>
