@@ -21,12 +21,31 @@
                     <img src="nodus.png" alt="NODUS Logo">
                     <span>NODUS</span>
                 </a>
-                <div class="nav-links">
-                    <a href="#home" class="active">Ana Sayfa</a>
-                    <a href="#services">Hizmetler</a>
-                    <a href="#portfolio">Portfolyo</a>
-                    <a href="#about">Hakkımızda</a>
-                    <a href="#contact">İletişim</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active" onclick="toggleMenu()">Ana Sayfa</a>
+                    <a href="#services" onclick="toggleMenu()">Hizmetler</a>
+                    <a href="#portfolio" onclick="toggleMenu()">Portfolyo</a>
+                    <a href="#about" onclick="toggleMenu()">Hakkımızda</a>
+                    <a href="#contact" onclick="toggleMenu()">İletişim</a>
+                </div>
+
+                <a href="https://wa.me/905351112233" target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <!-- Theme Toggle -->
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" onchange="toggleTheme(this.checked)">
+                        <div class="slider round">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
         </div>
@@ -621,6 +640,86 @@
                 alert('Bültenimize abone olduğunuz için teşekkürler! (' + email + ')');
                 emailInput.value = ''; // Clear input
             }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        // Theme Toggle Logic
+        function toggleTheme(isLight) {
+            if (isLight) {
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Check Local Storage on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const toggle = document.getElementById('checkbox');
+
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                if (toggle) toggle.checked = true;
+            }
+
+            // Start Hero Auto-Play
+            initHeroSlider();
+        });
+
+        // Hero Auto-Play Logic
+        function initHeroSlider() {
+            const items = document.querySelectorAll('.accordion-item');
+            const container = document.querySelector('.hero-accordion');
+            let currentIndex = 0;
+            let interval;
+            const delay = 2500; // 2.5 seconds
+
+            // Function to advance slide
+            const nextSlide = () => {
+                currentIndex = (currentIndex + 1) % items.length;
+
+                // Desktop: Class Based
+                if (window.innerWidth > 768) {
+                    items.forEach(el => el.classList.remove('active'));
+                    items[currentIndex].classList.add('active');
+                }
+                // Mobile: Scroll Based
+                else {
+                    const width = items[0].offsetWidth;
+                    container.scrollTo({
+                        left: width * currentIndex,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+
+            // Start Loop
+            const start = () => {
+                clearInterval(interval);
+                interval = setInterval(nextSlide, delay);
+            };
+
+            // Pause Loop
+            const stop = () => clearInterval(interval);
+
+            // Interaction Listeners (Pause on hover/touch)
+            container.addEventListener('mouseenter', stop);
+            container.addEventListener('mouseleave', start);
+            container.addEventListener('touchstart', stop);
+            container.addEventListener('touchend', start);
+
+            // Init state
+            if (window.innerWidth > 768) {
+                items[0].classList.add('active'); // Activate first on Desktop initially
+            }
+            start();
         }
     </script>
 </body>

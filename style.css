@@ -27,6 +27,96 @@
 
     /* Transitions */
     --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Light Mode Overrides */
+.light-mode {
+    --primary: #ffffff;
+    --secondary: #f0f4f8;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --white: #0f172a;
+    /* Inverted for headings */
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: 1px solid rgba(100, 255, 218, 0.2);
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Switcher Styles */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--secondary);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border: 1px solid var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+.slider .fa-sun {
+    color: #f39c12;
+}
+
+.slider .fa-moon {
+    color: #f1c40f;
+}
+
+.slider:before {
+    background-color: var(--text-main);
+    content: "";
+    bottom: 3px;
+    top: 3px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+    z-index: 2;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+    background-color: var(--primary);
+}
+
+/* Ensure mobile layout handles the extra button */
+@media (max-width: 768px) {
+    .theme-switch-wrapper {
+        margin-right: 20px;
+    }
 }
 
 /* Modern Reset */
@@ -90,8 +180,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    /* justify-content: space-between; Default handled by margin-left: auto on links */
 }
 
 .logo {
@@ -115,6 +205,10 @@ nav {
 .nav-links {
     display: flex;
     gap: 30px;
+    margin-left: auto;
+    /* Pushes links and what follows to the right */
+    margin-right: 20px;
+    /* Space between links and WhatsApp icon */
 }
 
 .nav-links a {
@@ -141,6 +235,31 @@ nav {
 
 .nav-links a:hover::after {
     width: 100%;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    font-size: 1.5rem;
+    color: #25D366;
+    /* WhatsApp Green */
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px #25D366);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-btn {
+        margin-left: auto;
+        /* Push to right next to hamburger */
+        margin-right: 20px;
+        /* Space between WA and Hamburger */
+        font-size: 1.8rem;
+    }
 }
 
 /* Hero Section - Accordion Style */
@@ -200,12 +319,14 @@ nav {
     transition: background 0.3s ease;
 }
 
-.accordion-item:hover {
+.accordion-item:hover,
+.accordion-item.active {
     flex: 3;
-    /* Expand on hover */
+    /* Expand on hover or active */
 }
 
-.accordion-item:hover::before {
+.accordion-item:hover::before,
+.accordion-item.active::before {
     background: rgba(10, 25, 47, 0.3);
     /* Lighter overlay on active */
 }
@@ -223,7 +344,8 @@ nav {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
 
-.accordion-item:hover .accordion-content {
+.accordion-item:hover .accordion-content,
+.accordion-item.active .accordion-content {
     transform: translateY(0);
     opacity: 1;
 }
@@ -244,7 +366,9 @@ nav {
 }
 
 /* Show description only on expanded item if space allows */
-.accordion-item:hover .accordion-content p {
+/* Show description only on expanded item if space allows */
+.accordion-item:hover .accordion-content p,
+.accordion-item.active .accordion-content p {
     display: block;
     animation: fadeIn 0.5s ease forwards;
 }
@@ -848,33 +972,29 @@ footer {
 .lightbox-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 900px;
-    max-height: 80vh;
+    max-width: 90%;
+    max-height: 80%;
     object-fit: contain;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
     animation: zoomIn 0.3s;
 }
 
 #caption {
-    margin: 20px 0;
-    width: 80%;
+    margin-top: 20px;
+    color: var(--text-main);
+    font-size: 1.2rem;
     text-align: center;
-    color: var(--accent);
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 10px 0;
 }
 
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    right: 30px;
+    color: var(--white);
+    font-size: 3rem;
     font-weight: bold;
-    transition: 0.3s;
+    transition: var(--transition);
     cursor: pointer;
     z-index: 2001;
 }
@@ -896,15 +1016,83 @@ footer {
     }
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
 /* Responsive */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navigation */
     .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(10, 25, 47, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         display: none;
-        /* Mobile menu implementation could go here */
+        /* Hidden by default */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show when active */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger */
+    }
+
+    /* Hero Accordion - Mobile Slider Fix */
+    .hero-accordion {
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        /* iOS smooth scroll */
+    }
+
+    .accordion-item {
+        min-width: 100vw;
+        /* Take full viewport width */
+        width: 100vw;
+        flex: none;
+        /* Disable flex growing/shrinking */
+        scroll-snap-align: start;
+    }
+
+    .accordion-item:hover {
+        flex: none;
+        /* Disable hover expansion on mobile */
+    }
+
+    /* Show text always on mobile since item is full width */
+    .accordion-content p {
+        display: block;
+        font-size: 0.95rem;
+        /* Readable size */
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
     }
 
     .contact-info {
