@@ -337,6 +337,10 @@ nav {
     position: relative;
     overflow: hidden;
     height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* Ensures height distributes content properly */
 }
 
 .service-card:hover {
@@ -360,6 +364,358 @@ nav {
 .service-card p {
     color: var(--text-muted);
     font-size: 1rem;
+}
+
+/* Expandable Card Styles */
+.service-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease, margin-top 0.3s ease;
+}
+
+.service-card.active .service-details {
+    max-height: 1000px;
+    /* Allow enough space for content */
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.service-card.active {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px -10px rgba(100, 255, 218, 0.15);
+    background: linear-gradient(145deg, #112240, #132b4f);
+}
+
+.service-details p {
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    border-left: 2px solid var(--accent);
+    padding-left: 15px;
+}
+
+.service-images {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.service-images img {
+    border-radius: 6px;
+    width: calc(50% - 10px);
+    height: 120px;
+    object-fit: cover;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    transition: var(--transition);
+}
+
+.service-images img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent);
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 100px 0;
+    background-color: var(--secondary);
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--accent);
+    color: var(--primary);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background: var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid transparent;
+    display: flex;
+    /* Card layout */
+    flex-direction: column;
+    height: auto;
+    /* Let height adapt to content reveal */
+    min-height: 200px;
+    /* Minimum visual height */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+/* New Visual Placeholders */
+.portfolio-visual {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-visual i {
+    transition: transform 0.5s ease;
+    z-index: 2;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item:hover .portfolio-visual i {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Gradients */
+.gradient-1 {
+    background: linear-gradient(135deg, #112240, #64ffda);
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #0a192f, #bd34fe);
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #112240, #ff6b6b);
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #233554, #feca57);
+}
+
+.portfolio-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Transition for smooth height change if needed, but we animate elements inside */
+}
+
+/* Hide content by default */
+.portfolio-info p,
+.portfolio-link {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Reveal content on hover */
+.portfolio-item:hover .portfolio-info p {
+    max-height: 200px;
+    /* Enough for text */
+    opacity: 1;
+    margin-bottom: 20px;
+}
+
+.portfolio-item:hover .portfolio-link {
+    max-height: 50px;
+    opacity: 1;
+}
+
+.portfolio-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+.category-tag {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.portfolio-link {
+    margin-top: auto;
+    /* Push to bottom */
+    display: inline-flex;
+    align-items: center;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.portfolio-link i {
+    margin-left: 8px;
+    color: var(--accent);
+}
+
+.portfolio-link:hover {
+    color: var(--accent);
+}
+
+/* Removed old overlay/content styles as we are now using explicit blocks */
+.portfolio-overlay,
+.portfolio-content,
+.portfolio-btn,
+.portfolio-item img {
+    display: none;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.4));
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-content {
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-content {
+    transform: translateY(0);
+}
+
+.portfolio-content h3 {
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 5px;
+}
+
+.portfolio-content span {
+    color: var(--accent);
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.portfolio-btn {
+    display: inline-block;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolio-btn i {
+    margin-left: 5px;
+    transition: margin-left 0.2s;
+}
+
+.portfolio-btn:hover i {
+    margin-left: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 100px 0;
+    position: relative;
+    background-color: var(--secondary);
+    /* Alternating background */
+}
+
+/* Ensure Contact has distinct BG if needed, or keep gradients */
+/* Note: Contact uses a gradient, so solid secondary here is fine for contrast */
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-text-content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-text-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-text-content .highlight {
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 300;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Contact Section */
@@ -412,6 +768,132 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
     font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: var(--secondary);
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.newsletter h3 {
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--text-muted);
+    background: transparent;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background-color: var(--accent);
+    color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background-color: var(--accent-tint);
+}
+
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    animation: zoomIn 0.3s;
+}
+
+#caption {
+    margin: 20px 0;
+    width: 80%;
+    text-align: center;
+    color: var(--accent);
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* Responsive */
