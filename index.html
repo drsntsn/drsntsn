@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NODUS - Teknoloji & Güvenlik Çözümleri</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="nodus.png" alt="NODUS Logo">
+                    <span>NODUS</span>
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active" onclick="toggleMenu()">Ana Sayfa</a>
+                    <a href="#services" onclick="toggleMenu()">Hizmetler</a>
+                    <a href="#portfolio" onclick="toggleMenu()">Portfolyo</a>
+                    <a href="#about" onclick="toggleMenu()">Hakkımızda</a>
+                    <a href="#contact" onclick="toggleMenu()">İletişim</a>
+                </div>
+
+                <a href="https://wa.me/905351112233" target="_blank" class="whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <!-- Theme Toggle -->
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" onchange="toggleTheme(this.checked)">
+                        <div class="slider round">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="hamburger" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-accordion">
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Dijital Kalkanınız</h2>
+                    <p>Güvenliğiniz bizim önceliğimiz.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Geleceği Kodluyoruz</h2>
+                    <p>Web dünyasında iz bırakın.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Akıllı Yaşam</h2>
+                    <p>Eviniz size itaat etsin.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Gözünüz Arkada Kalmasın</h2>
+                    <p>7/24 Kesintisiz Gözetim.</p>
+                </div>
+            </div>
+            <div class="accordion-item"
+                style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070');">
+                <div class="accordion-content">
+                    <h2>Sınırları Zorlayın</h2>
+                    <p>Teknolojinin zirvesine yolculuk.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hizmetlerimiz</h2>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <!-- Service 1 -->
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Güvenlik Sistemleri</h3>
+
+                    <div class="service-summary">
+                        <p>7/24 kayıt, uzaktan izleme, plaka tanıma ve yapay zeka destekli analiz sistemleri ile eviniz
+                            ve iş yeriniz tam koruma altında.</p>
+                    </div>
+
+                    <div class="service-details">
+                        <p>Nodus olarak, güvenliğinizi şansa bırakmıyoruz. En son teknoloji IP kameralar, yapay zeka
+                            destekli hareket algılama sensörleri ve 7/24 aktif bulut tabanlı izleme sistemlerimizle,
+                            varlıklarınızı koruma altına alıyoruz.</p>
+
+                        <p>Gecenin en karanlık anında bile termal görüş yeteneklerimizle hiçbir detayı kaçırmazsın.
+                            Sadece izlemekle kalmıyor, proaktif uyarı sistemlerimizle (siren, flaşör, mobil bildirim)
+                            tehditleri oluşmadan engelliyoruz.</p>
+
+                        <p>Siz işinize odaklanırken, biz arka planda dijital kalkanınızı en güçlü şekilde tutuyoruz.
+                            Uzaktan erişim imkanı sayesinde dünyanın neresinde olursanız olun, kontrol parmaklarınızın
+                            ucunda.</p>
+
+                        <div class="service-images">
+                            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=300&q=80"
+                                alt="Güvenlik Kamerası">
+                            <img src="https://images.unsplash.com/photo-1558002038-1091a1661116?auto=format&fit=crop&w=300&q=80"
+                                alt="Akıllı Kilit">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Web Tasarım & Yazılım</h3>
+
+                    <div class="service-summary">
+                        <p>İşletmenizi dijital dünyaya taşıyan, SEO uyumlu, hızlı ve estetik web siteleri ve özel
+                            yazılım çözümleri üretiyoruz.</p>
+                    </div>
+
+                    <div class="service-details">
+                        <p>Dijital vitrininiz, dünyadaki yüzünüzdür. Biz, sadece kod yazmıyoruz; markanızın ruhunu
+                            yansıtan, hızla açılan ve kullanıcı deneyimini (UX) zirveye taşıyan sanat eserleri
+                            tasarlıyoruz.</p>
+
+                        <p>Mobil uyumlu, SEO dostu ve dönüşüm odaklı web sitelerimizle rakiplerinizin önüne geçin.
+                            E-ticaret platformlarından kurumsal tanıtım sitelerine kadar, her pikselde mükemmelliği
+                            hedefliyoruz.</p>
+
+                        <p>Sizin hayaliniz, bizim kodlarımızla can bulsun. Özelleştirilebilir yönetim panelleri ve
+                            ölçeklenebilir altyapılarımızla, işiniz büyüdükçe yazılımınız da sizinle birlikte büyür.</p>
+
+                        <div class="service-images">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=300&q=80"
+                                alt="Kodlama">
+                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=300&q=80"
+                                alt="Web Tasarım">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card" onclick="toggleService(this)">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3>Otomasyon & Akıllı Ev</h3>
+
+                    <div class="service-summary">
+                        <p>Hayatınızı kolaylaştıran akıllı ev sistemleri, personel takip yazılımları ve endüstriyel
+                            otomasyon çözümleri.</p>
+                    </div>
+
+                    <div class="service-details">
+                        <p>Geleceğin konforunu bugünden yaşayın. Sabah uyanmadan kahveniz hazır olsun, eve gelirken
+                            perdeleriniz açılsın ve iklimlendirme sistemi ideal sıcaklığı ayarlasın.</p>
+
+                        <p>Nodus Akıllı Ev çözümleri ile yaşam alanlarınız size itaat eder. Enerji tasarrufu sağlayan
+                            akıllı prizler, sesli komut asistan entegrasyonları ve senaryo tabanlı otomasyonlarla
+                            evinizi bir yaşam partnerine dönüştürüyoruz.</p>
+
+                        <p>Tek dokunuşla tüm ev kontrolünüz altında. Endüstriyel alanda da verimliliği artıran otomasyon
+                            çözümlerimizle, üretim hatlarınızda hatayı minimize edip hızı maksimize ediyoruz.</p>
+
+                        <div class="service-images">
+                            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=300&q=80"
+                                alt="Akıllı Ev">
+                            <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=300&q=80"
+                                alt="Otomasyon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolyo</h2>
+                <p>Digital çözümlerimizden seçkiler.</p>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" onclick="filterPortfolio('web')">Web Tasarım</button>
+                    <button class="filter-btn" onclick="filterPortfolio('security')">Güvenlik Sistemleri</button>
+                    <button class="filter-btn" onclick="filterPortfolio('automation')">Otomasyon</button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- === WEB KATEGORİSİ === -->
+                <!-- Berber -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-1">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Makas Sanatı</h3>
+                        <span class="category-tag">Berber & Saç Tasarım</span>
+                        <p>Modern erkek kuaförleri için geliştirdiğimiz bu projede, müşterilerin kolayca randevu
+                            alabileceği, personel seçimi yapabileceği ve önceki saç kesimlerini galeride
+                            inceleyebileceği şık bir arayüz tasarladık. Mobil uyumlu yapısı sayesinde her an
+                            ulaşılabilir.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Anahtarcı -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1555421689-d68471e189f2?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-2">
+                        <i class="fa-solid fa-key"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Güven Anahtar</h3>
+                        <span class="category-tag">7/24 Çilingir Hizmeti</span>
+                        <p>Acil durumlarda hızlı erişim için tasarlanan bu web sitesinde, "Hemen Ara" butonu ve konum
+                            paylaşma özellikleri ön plana çıkarıldı. Kullanıcı güvenini artırmak için referanslar ve
+                            sertifikalar görünür bir şekilde yerleştirildi. SEO çalışmalarıyla bölgede ilk sıraya
+                            yerleşti.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kasap -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1483058712488-75294060efc5?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-3">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Lezzet Et</h3>
+                        <span class="category-tag">Kasap & Şarküteri</span>
+                        <p>Hijyen ve tazeliği vurgulayan temiz bir tasarım dili kullanıldı. Günlük taze et ürünlerinin
+                            sergilendiği bir ürün vitrini ve özel sipariş formu entegre edildi. Müşteriler, özel kesim
+                            taleplerini site üzerinden kolayca iletebiliyorlar.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Züccaciye -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-4">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Evim Şahane</h3>
+                        <span class="category-tag">Züccaciye & Dekorasyon</span>
+                        <p>Şık ve zarif ürünlerin ön plana çıktığı, görsel ağırlıklı bir e-ticaret altyapısı kuruldu.
+                            Gelişmiş filtreleme seçenekleri (renk, materyal, fiyat) ile kullanıcıların aradıkları ürüne
+                            saniyeler içinde ulaşması sağlandı. Stok takibi otomatik hale getirildi.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Fırın -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-1">
+                        <i class="fa-solid fa-bread-slice"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Taze Fırın</h3>
+                        <span class="category-tag">Unlu Mamüller</span>
+                        <p>Mahallenin fırınının dijital yüzü. Her sabah çıkan sıcak ürünlerin listelendiği, "Askıda
+                            Ekmek" uygulamasının dijital olarak takip edilebildiği samimi bir sayfa. Fırından yeni çıkan
+                            ürünler için bildirim sistemi eklendi.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Çiçekçi -->
+                <div class="portfolio-item web"
+                    data-image="https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-2">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Renkli Bahçe</h3>
+                        <span class="category-tag">Çiçek & Peyzaj</span>
+                        <p>Özel günler için çiçek siparişi verilebilen, sipariş durumunun anlık takip edildiği renkli
+                            bir dünya. Müşteriler siparişlerine video not ekleyebiliyor ve teslimat anını fotoğraflı
+                            olarak görebiliyorlar.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- === GÜVENLİK KATEGORİSİ === -->
+                <div class="portfolio-item security" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-3">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Site Güvenliği</h3>
+                        <span class="category-tag">CCTV & Kamera Sistemi</span>
+                        <p>Büyük ölçekli konut projeleri için 200+ kameralı merkezi izleme sistemi kurulumu. Yapay zeka
+                            destekli analiz yazılımı ile şüpheli durumlar anında güvenliğe bildiriliyor. Plaka tanıma
+                            sistemi ile site giriş çıkışları tam kontrol altında.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item security" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-4">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>İş Merkezi Alarm</h3>
+                        <span class="category-tag">Hırsız & Yangın Alarmı</span>
+                        <p>Çok katlı iş merkezi için entegre yangın ve hırsız alarm sistemi. Mobil uygulama üzerinden
+                            her ofis kendi alarmını kurup kapatabiliyor. 7/24 Alarm Haber Alma Merkezi bağlantısı ile
+                            maksimum güvenlik sağlanıyor.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item security" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-3">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Yüz Tanıma Sistemi</h3>
+                        <span class="category-tag">Biyometrik Geçiş</span>
+                        <p>Holding binası girişlerinde kartlı geçiş yerine biyometrik yüz tanıma sistemi
+                            entegrasyonu. 0.2 saniyede tanıma hızı ve maskeli geçiş desteği ile personel takibi
+                            temassız ve güvenli hale getirildi.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item security" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1596495577887-e9fa8b4447d2?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-4">
+                        <i class="fa-solid fa-fire-extinguisher"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Akıllı Yangın Sistemi</h3>
+                        <span class="category-tag">Endüstriyel Güvenlik</span>
+                        <p>Endüstriyel depolama alanı için erken uyarı yangın sistemi. Isı ve duman dedektörlerinin
+                            entegre çalışması sayesinde olası tehlikeler büyümeden duman tahliye motorları otomatik
+                            devreye girer.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- === OTOMASYON KATEGORİSİ === -->
+                <div class="portfolio-item automation" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1558002038-1091a1661116?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-1">
+                        <i class="fa-solid fa-house-signal"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Akıllı Villa</h3>
+                        <span class="category-tag">Ev Otomasyonu</span>
+                        <p>Lüks bir villa projesi için aydınlatma, iklimlendirme, perde ve multimedya sistemlerinin
+                            tek
+                            bir tabletten yönetilmesi sağlandı. "Eve Geldim" ve "Evden Çıktım" senaryoları ile tek
+                            tuşla
+                            tüm ev kontrol edilebiliyor.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item automation" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1565514020125-998ac6ebc94d?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-2">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Üretim Hattı</h3>
+                        <span class="category-tag">Endüstriyel Otomasyon</span>
+                        <p>Bir gıda fabrikasının paketleme hattının PLC ile otomasyonu. Üretim adetleri, hata
+                            oranları
+                            ve makine verimliliği anlık olarak yönetici ekranlarına yansıtılıyor. İnsan hatasını
+                            sıfıra
+                            indiren %20 verimlilik artışı sağlandı.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item automation" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1473341304177-f26f840af751?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-1">
+                        <i class="fa-solid fa-solar-panel"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Enerji Yönetimi</h3>
+                        <span class="category-tag">Enerji Verimliliği</span>
+                        <p>Kurumsal bir binada enerji tüketiminin azaltılması için akıllı sayaç ve röle
+                            entegrasyonu. Gereksiz yanan ışıklar ve çalışan klimalar sensörlerle tespit edilip
+                            otomatik kapatılarak %30 enerji tasarrufu sağlandı.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item automation" style="display:none;"
+                    data-image="https://images.unsplash.com/photo-1585320806203-b0e2719a9332?auto=format&fit=crop&w=1200&q=90">
+                    <div class="portfolio-visual gradient-2">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Akıllı Sera</h3>
+                        <span class="category-tag">Tarım Otomasyonu</span>
+                        <p>Topraksız tarım yapan modern sera için nem, sıcaklık ve sulama otomasyonu. Ürün
+                            verimliliğini artıran bu sistem, mobil uygulama üzerinden uzaktan izlenebilmekte ve
+                            raporlanabilmektedir.</p>
+                        <a href="javascript:void(0)" class="portfolio-link"
+                            onclick="openLightbox(this.closest('.portfolio-item'))">Projeyi İncele <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hakkımızda</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text-content">
+                    <p class="highlight">2024 yılında, teknolojinin değiştirdiği dünyada güvenli adımlar atmak
+                        isteyenler için kurulduk.</p>
+                    <p>Nodus olarak, kısa sürede yüzlerce işletmeyi dijital geleceğe hazırladık. Hedefimiz sadece
+                        bugünün ihtiyaçlarını karşılamak değil; <strong>Yarının teknolojilerini bugünden inşa
+                            etmek.</strong></p>
+                    <p>Yapay zeka destekli güvenlikten, otonom endüstriyel sistemlere kadar geniş bir yelpazede,
+                        kararlılıkla ve başarıyla yürümeye devam ediyoruz. Küçük bir kıvılcım olarak başladığımız bu
+                        yolculukta, şimdi geleceğin meşalesini taşıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>İletişime Geçin</h2>
+                <p>Projenizi hayata geçirmek için bir kahve içmeye ne dersiniz? Hemen bize ulaşın.</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0555 XXX XX XX</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>info@nodus.com.tr</span>
+                    </div>
+                </div>
+
+                <a href="mailto:info@nodus.com.tr" class="cta-btn">Mesaj Gönder</a>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h3>Bültene Abone Olun</h3>
+                <p>Son teknoloji gelişmelerinden ve özel fırsatlardan ilk siz haberdar olun.</p>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" id="newsletter-email" placeholder="E-posta adresiniz" required>
+                    <button type="submit">Abone Ol</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NODUS Teknoloji. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function toggleService(card) {
+            // Close other cards
+            const allCards = document.querySelectorAll('.service-card');
+            allCards.forEach(c => {
+                if (c !== card) {
+                    c.classList.remove('active');
+                }
+            });
+
+            // Toggle current card
+            card.classList.toggle('active');
+        }
+
+        // Lightbox Functions
+        function openLightbox(item) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const caption = document.getElementById('caption');
+            const title = item.querySelector('h3').innerText;
+            const imageUrl = item.getAttribute('data-image'); // Get image from data attribute
+
+            lightbox.style.display = "flex";
+
+            if (imageUrl) {
+                lightboxImg.src = imageUrl;
+                lightboxImg.style.display = "block"; // Show image
+            } else {
+                lightboxImg.style.display = "none";
+            }
+
+            caption.innerHTML = title;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = "none";
+        }
+
+        // Portfolio Filter Function
+        function filterPortfolio(category) {
+            // Update active button
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('onclick').includes(category)) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Filter items
+            const items = document.querySelectorAll('.portfolio-item');
+            items.forEach(item => {
+                if (item.classList.contains(category)) {
+                    item.style.display = 'flex'; // Use flex to maintain card layout
+                    // Optional: Add simple animation
+                    item.animate([
+                        { transform: 'scale(0.9)', opacity: 0 },
+                        { transform: 'scale(1)', opacity: 1 }
+                    ], {
+                        duration: 300,
+                        fill: 'forwards'
+                    });
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Newsletter Subscription
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('newsletter-email');
+            const email = emailInput.value;
+
+            if (email) {
+                // Get existing emails or init empty array
+                let emails = JSON.parse(localStorage.getItem('nodusEmails')) || [];
+
+                // Add new email
+                emails.push(email);
+
+                // Save back to storage
+                localStorage.setItem('nodusEmails', JSON.stringify(emails));
+
+                // User Feedback
+                alert('Bültenimize abone olduğunuz için teşekkürler! (' + email + ')');
+                emailInput.value = ''; // Clear input
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+
+        // Theme Toggle Logic
+        function toggleTheme(isLight) {
+            if (isLight) {
+                document.body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Check Local Storage on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            const toggle = document.getElementById('checkbox');
+
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                if (toggle) toggle.checked = true;
+            }
+
+            // Start Hero Auto-Play
+            initHeroSlider();
+        });
+
+        // Hero Auto-Play Logic
+        function initHeroSlider() {
+            const items = document.querySelectorAll('.accordion-item');
+            const container = document.querySelector('.hero-accordion');
+            let currentIndex = 0;
+            let interval;
+            const delay = 2500; // 2.5 seconds
+
+            // Function to advance slide
+            const nextSlide = () => {
+                currentIndex = (currentIndex + 1) % items.length;
+
+                // Desktop: Class Based
+                if (window.innerWidth > 768) {
+                    items.forEach(el => el.classList.remove('active'));
+                    items[currentIndex].classList.add('active');
+                }
+                // Mobile: Scroll Based
+                else {
+                    const width = items[0].offsetWidth;
+                    container.scrollTo({
+                        left: width * currentIndex,
+                        behavior: 'smooth'
+                    });
+                }
+            };
+
+            // Start Loop
+            const start = () => {
+                clearInterval(interval);
+                interval = setInterval(nextSlide, delay);
+            };
+
+            // Pause Loop
+            const stop = () => clearInterval(interval);
+
+            // Interaction Listeners (Pause on hover/touch)
+            container.addEventListener('mouseenter', stop);
+            container.addEventListener('mouseleave', start);
+            container.addEventListener('touchstart', stop);
+            container.addEventListener('touchend', start);
+
+            // Init state
+            if (window.innerWidth > 768) {
+                items[0].classList.add('active'); // Activate first on Desktop initially
+            }
+            start();
+        }
+    </script>
+</body>
+
+</html>
