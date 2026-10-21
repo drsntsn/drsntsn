@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80" width="100%" height="80">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161b22" />
+      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+
+    <linearGradient id="footerLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00dfc4" stop-opacity="0" />
+      <stop offset="30%" stop-color="#00dfc4" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#58a6ff" stop-opacity="1" />
+      <stop offset="70%" stop-color="#a371f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a371f7" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="80" rx="10" fill="url(#footerBg)" />
+  <rect x="50" y="1" width="800" height="2" fill="url(#footerLine)" />
+
+  <text x="450" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#8b949e">
+    ⚡ Architected with Precision, Simplicity &amp; Zero Compromise on Security • © 2026 Dursun Tosun
+  </text>
+
+  <rect x="0.5" y="0.5" width="899" height="79" rx="9.5" fill="none" stroke="#30363d" stroke-width="1" />
+</svg>

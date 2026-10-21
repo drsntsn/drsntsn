@@ -1,0 +1,24 @@
+# Environment and Secrets (Ironclad Protection)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+id_rsa*
+credentials.json
+*secret*
+*token*.json
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+.idea/
+.vscode/
+
+# Build and Dependencies
+node_modules/
+dist/
+build/
