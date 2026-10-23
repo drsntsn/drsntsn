@@ -18,71 +18,73 @@
   <img src="https://img.shields.io/badge/Maden_Yüksek_Mühendisi-M.Sc._Mining_Eng.-f59e0b?style=for-the-badge&logo=codewars&logoColor=white&labelColor=161b22" alt="Mining Eng." />
   <img src="https://img.shields.io/badge/Full--Stack-Developer-58a6ff?style=for-the-badge&logo=react&logoColor=white&labelColor=161b22" alt="Full-Stack" />
   <img src="https://img.shields.io/badge/Data_Science-ML_%26_Analytics-10b981?style=for-the-badge&logo=databricks&logoColor=white&labelColor=161b22" alt="Data Science" />
-  <img src="https://img.shields.io/badge/GitHub-drsntsn-a371f7?style=for-the-badge&logo=github&logoColor=white&labelColor=161b22" href="https://github.com/drsntsn" alt="GitHub" />
+  <a href="https://github.com/drsntsn?tab=repositories"><img src="https://img.shields.io/badge/GitHub-drsntsn-a371f7?style=for-the-badge&logo=github&logoColor=white&labelColor=161b22" alt="GitHub" /></a>
 
 </div>
 
 ---
 
-## 👨‍💻 Kim Ben?
+## 🎯 Hakkımda
 
-**Maden Yüksek Mühendisi** formasyonundan gelen **analitik modelleme disiplinini**, modern full-stack yazılım mimarileri ve veri bilimiyle birleştiriyorum.
+**Maden Yüksek Mühendisi** formasyonundan gelen **analitik modelleme ve mühendislik matematiğini**, modern full-stack yazılım mimarileri ve veri bilimiyle birleştiriyorum.
 
-Maden jeolojisi & jeodezik hesaplamalardan uçtan uca SaaS platformlarına, XGBoost modellerinden Flutter mobil uygulamalarına kadar her katmanda çalışan bir geliştirici perspektifine sahibim.
+Maden jeolojisi & jeodezik hesap motorlarından uçtan uca SaaS platformlarına, XGBoost tahminleme modellerinden Flutter & Next.js mimarilerine kadar üretim seviyesinde çözümler üretiyorum.
 
-> *"Kompleks problemleri yalın, güvenli ve test edilmiş kod ile çözüyorum."*
+> *"Kompleks problemleri yalın, güvenli ve test edilmiş mimariler ile çözüyorum."*
 
 ---
 
-## 🌟 Öne Çıkan Projeler
+## 🚀 Öne Çıkan Projeler
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🍷 <a href="https://github.com/drsntsn/papazlik_qr">papazlik_qr</a></h3>
+      <h3>🌟 <a href="https://github.com/drsntsn/papazlik_qr">papazlik_qr</a></h3>
       <p><b>Enterprise QR Menü & Restoran Sipariş Ekosistemi</b></p>
-      <p>4 ayrı uygulama tek monorepo altında: vanilla portal, React 19 + Gemini AI istemci, Flutter mobil ve Next.js yönetim paneli. Supabase PostgreSQL + RLS güvenliği.</p>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white" />
-      <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" />
+      <p>Monorepo mimarisi: React 19 + Gemini AI istemci, Flutter mobil POS/kiosk, Next.js 15 yönetim paneli ve Node.js backend. Supabase PostgreSQL & Row-Level Security (RLS) ile güçlendirildi.</p>
+      <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat&logo=react&logoColor=black" />
       <img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white" />
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white" />
+      <img src="https://img.shields.io/badge/Next.js_15-000000?style=flat&logo=nextdotjs&logoColor=white" />
+      <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" />
     </td>
     <td width="50%" valign="top">
-      <h3>🏠 <a href="https://github.com/drsntsn/EvFiyatTahmini">EvFiyatTahmini</a></h3>
-      <p><b>Uçtan Uca Makine Öğrenmesi: Ev Fiyat Tahmini</b></p>
-      <p>Selenium ile emlakjet.com web kazıma → Pandas EDA → XGBoost GridSearchCV (R²≈0.87) → Tkinter masaüstü arayüzü. 5 aşamalı tam ML pipeline.</p>
+      <h3>📈 <a href="https://github.com/drsntsn/EvFiyatTahmini">EvFiyatTahmini</a></h3>
+      <p><b>Uçtan Uca Makine Öğrenmesi & Fiyat Tahminleme</b></p>
+      <p>Selenium web kazıma pipeline'ı, Pandas/Seaborn keşifçi veri analizi (EDA), GridSearchCV ile hiperparametre optimizasyonu (XGBoost R² &ge; 0.87) ve Tkinter GUI masaüstü arayüzü.</p>
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
       <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat&logo=xgboost&logoColor=white" />
       <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white" />
+      <img src="https://img.shields.io/badge/Selenium-43B02A?style=flat&logo=selenium&logoColor=white" />
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3>🌐 <a href="https://github.com/drsntsn/cevir-turkiye-d">cevir-turkiye-d</a></h3>
       <p><b>Türkiye Jeodezi & Koordinat Dönüşüm Sistemi</b></p>
-      <p>ED50 ↔ ITRF ↔ WGS84 milimetre hassasiyetli dönüşümler. UTM, Gauss-Kruger, Datum Shift. React + Vite + Supabase tabanlı mühendislik aracı.</p>
+      <p>ED50 ⇄ ITRF ⇄ WGS84 milimetre hassasiyetli datum dönüşümleri. 3° & 6° UTM projeksiyonları, Gauss-Krüger formülasyonu. React + Vite tabanlı yüksek performanslı web GIS aracı.</p>
       <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" />
-      <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" />
+      <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" />
       <img src="https://img.shields.io/badge/Geodesy-f59e0b?style=flat&logo=googleearth&logoColor=white" />
+      <img src="https://img.shields.io/badge/GIS-4285F4?style=flat&logo=googlemaps&logoColor=white" />
     </td>
     <td width="50%" valign="top">
-      <h3>⛏️ <a href="https://github.com/drsntsn/geodesy_master">geodesy_master</a> & <a href="https://github.com/drsntsn/sondaj">sondaj</a></h3>
+      <h3>⛰️ <a href="https://github.com/drsntsn/geodesy_master">geodesy_master</a> & <a href="https://github.com/drsntsn/sondaj">sondaj</a></h3>
       <p><b>Maden Jeolojisi & Jeodezik Hesap Motorları</b></p>
-      <p>WGS-84 Vincenty mesafe, MGRS/NATO dönüşümleri, stratigrafik katman analizi, maden sahası borehole log görselleştirme. Mühendislik matematiğini koda döküyor.</p>
+      <p>WGS-84 Vincenty elipsoid mesafe/azimut algoritması, NATO MGRS dönüşümleri, stratigrafik katman analizi ve maden sahası borehole log görselleştirme sistemleri.</p>
       <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
       <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
-      <img src="https://img.shields.io/badge/GIS-4285F4?style=flat&logo=googlemaps&logoColor=white" />
+      <img src="https://img.shields.io/badge/Geology-10b981?style=flat&logo=databricks&logoColor=white" />
     </td>
   </tr>
 </table>
 
 ---
 
-## 🛠️ Teknoloji Yığını
+## 🛠️ Yetkinlikler & Teknoloji Yığını
 
 <div align="center">
 
-**Diller**
+**Diller & Temel Teknolojiler**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -90,7 +92,7 @@ Maden jeolojisi & jeodezik hesaplamalardan uçtan uca SaaS platformlarına, XGBo
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**Web & Mobil**
+**Web, Mobil & Bulut**
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -98,13 +100,13 @@ Maden jeolojisi & jeodezik hesaplamalardan uçtan uca SaaS platformlarına, XGBo
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 
-**Veri & ML**
+**Veri Bilimi, Makine Öğrenmesi & CBS**
 
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge&logo=xgboost&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![Selenium](https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![GIS & Geodesy](https://img.shields.io/badge/GIS_%26_Geodesy-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white)
 
 </div>
 
@@ -132,16 +134,20 @@ Maden jeolojisi & jeodezik hesaplamalardan uçtan uca SaaS platformlarına, XGBo
 
 ---
 
-## 💡 Çalışma Prensipleri
+## ⚡ Mühendislik İlkeleri
+
+<div align="center">
 
 ```text
-┌──────────────────────────────────────────────────────────────────────┐
-│  1. Sadelik   →  Gereksiz karmaşıklık yoktur. Yalın, okunabilir kod.  │
-│  2. Güvenlik  →  OWASP standartları. Sıfır hardcoded secret.          │
-│  3. Modernlik →  Güncel ekosistem. Ergonomik DX. Canlı UX.            │
-│  4. Güçlü     →  Tip güvenliği. %100 test kapsamı hedefi. TDD.        │
-└──────────────────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────┐
+│  1. Sadelik   : Gereksiz karmaşıklık yoktur. Yalın ve okunabilir kod.  │
+│  2. Güvenlik  : Sıfır taviz. OWASP standartları & sıfır gizli anahtar. │
+│  3. Modernlik : Güncel kütüphaneler, ergonomik DX ve akıcı UX.         │
+│  4. Güçlü Yapı: Tip güvenliği, modüler mimari ve test odaklı yaklaşım. │
+└────────────────────────────────────────────────────────────────────────┘
 ```
+
+</div>
 
 ---
 
@@ -154,8 +160,8 @@ Maden jeolojisi & jeodezik hesaplamalardan uçtan uca SaaS platformlarına, XGBo
 
   <br/>
 
-  **Profilimi beğendiyseniz ⭐ bırakmayı unutmayın!**
+  ⭐ **Çalışmalarımı beğendiyseniz repolara bir yıldız bırakmayı unutmayın!** ⭐
 
-  *© 2026 Dursun Tosun — Maden Yüksek Mühendisi & Full-Stack Developer*
+  *© 2026 Dursun Tosun • Maden Yüksek Mühendisi & Full-Stack Developer*
 
 </div>
