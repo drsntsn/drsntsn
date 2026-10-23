@@ -1,91 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="100%" height="200">
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="50%" stop-color="#0d1117" />
+      <stop offset="0%"   stop-color="#060b14" />
+      <stop offset="50%"  stop-color="#0d1117" />
       <stop offset="100%" stop-color="#161b22" />
     </linearGradient>
 
-    <linearGradient id="cyanBlueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00dfc4" />
-      <stop offset="50%" stop-color="#58a6ff" />
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00dfc4" />
+      <stop offset="45%"  stop-color="#58a6ff" />
       <stop offset="100%" stop-color="#a371f7" />
     </linearGradient>
 
     <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00dfc4" stop-opacity="0" />
-      <stop offset="25%" stop-color="#00dfc4" stop-opacity="0.8" />
-      <stop offset="50%" stop-color="#58a6ff" stop-opacity="1" />
-      <stop offset="75%" stop-color="#a371f7" stop-opacity="0.8" />
+      <stop offset="0%"   stop-color="#00dfc4" stop-opacity="0" />
+      <stop offset="30%"  stop-color="#00dfc4" stop-opacity="0.9" />
+      <stop offset="60%"  stop-color="#58a6ff" stop-opacity="1" />
+      <stop offset="85%"  stop-color="#a371f7" stop-opacity="0.8" />
       <stop offset="100%" stop-color="#a371f7" stop-opacity="0" />
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255, 255, 255, 0.03)" stroke-width="1" />
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="rgba(88,166,255,0.04)" stroke-width="1" />
     </pattern>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="900" height="240" rx="14" fill="url(#bgGrad)" />
+  <!-- Background -->
+  <rect width="900" height="200" rx="12" fill="url(#bgGrad)" />
+  <rect width="900" height="200" rx="12" fill="url(#grid)" />
 
-  <!-- Subtle Geometric Grid Layer -->
-  <rect width="900" height="240" rx="14" fill="url(#grid)" />
+  <!-- Ambient glows -->
+  <circle cx="160" cy="55" r="90"  fill="#00dfc4" opacity="0.055" filter="url(#softGlow)" />
+  <circle cx="760" cy="130" r="110" fill="#a371f7" opacity="0.055" filter="url(#softGlow)" />
 
-  <!-- Decorative Geospatial Geometry Polygon (Shoelace motif) -->
-  <path d="M 720 30 L 850 70 L 820 190 L 680 210 L 650 110 Z" fill="none" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4,4" opacity="0.25" />
-  <circle cx="720" cy="30" r="3" fill="#00dfc4" opacity="0.6" />
-  <circle cx="850" cy="70" r="3" fill="#58a6ff" opacity="0.6" />
-  <circle cx="820" cy="190" r="3" fill="#a371f7" opacity="0.6" />
-  <circle cx="680" cy="210" r="3" fill="#00dfc4" opacity="0.6" />
-  <circle cx="650" cy="110" r="3" fill="#58a6ff" opacity="0.6" />
-  <line x1="720" y1="30" x2="820" y2="190" stroke="#00dfc4" stroke-width="1" opacity="0.15" />
-  <line x1="850" y1="70" x2="680" y2="210" stroke="#58a6ff" stroke-width="1" opacity="0.15" />
+  <!-- Geodesy polygon decoration (top right) -->
+  <polygon points="740,18 862,58 838,172 706,188 672,98" fill="none" stroke="#58a6ff" stroke-width="0.8" stroke-dasharray="5,5" opacity="0.2" />
+  <circle cx="740"  cy="18"  r="2.5" fill="#00dfc4" opacity="0.7" />
+  <circle cx="862"  cy="58"  r="2.5" fill="#58a6ff" opacity="0.7" />
+  <circle cx="838"  cy="172" r="2.5" fill="#a371f7" opacity="0.7" />
+  <circle cx="706"  cy="188" r="2.5" fill="#00dfc4" opacity="0.7" />
+  <circle cx="672"  cy="98"  r="2.5" fill="#58a6ff" opacity="0.7" />
+  <!-- Diagonals inside polygon -->
+  <line x1="740" y1="18" x2="838" y2="172" stroke="#00dfc4" stroke-width="0.6" opacity="0.12" />
+  <line x1="862" y1="58" x2="706" y2="188" stroke="#58a6ff" stroke-width="0.6" opacity="0.12" />
 
-  <!-- Ambient Glow Blob -->
-  <circle cx="200" cy="60" r="100" fill="#00dfc4" opacity="0.06" filter="url(#glow)" />
-  <circle cx="750" cy="140" r="120" fill="#58a6ff" opacity="0.06" filter="url(#glow)" />
-
-  <!-- Main Name Header -->
-  <text x="60" y="85" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="38" font-weight="900" fill="url(#cyanBlueGrad)" letter-spacing="1.5">
+  <!-- Name -->
+  <text x="58" y="76"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="42" font-weight="900"
+        fill="url(#nameGrad)" letter-spacing="2">
     DURSUN TOSUN
   </text>
 
-  <!-- Title / Roles -->
-  <text x="62" y="122" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#e6edf3" letter-spacing="0.5">
-    Maden Yüksek Mühendisi (M.Sc. Mining Eng.) • Full-Stack Developer • Veri Uzmanı
+  <!-- Subtitle -->
+  <text x="60" y="110"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="14.5" font-weight="600"
+        fill="#8b949e" letter-spacing="0.8">
+    Mining M.Sc. Engineer  ·  Full-Stack Developer  ·  Data Scientist
   </text>
 
-  <!-- Glowing Accent Divider Line -->
-  <rect x="60" y="142" width="780" height="2" fill="url(#glowLine)" />
+  <!-- Glow divider -->
+  <rect x="58" y="128" width="784" height="1.5" fill="url(#glowLine)" />
 
-  <!-- 4 Core Pillars Pills / Badges -->
-  <g transform="translate(60, 165)">
-    <!-- Pillar 1 -->
-    <rect x="0" y="0" width="135" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <circle cx="16" cy="16" r="4" fill="#00dfc4" />
-    <text x="28" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Sadelik (Clean)</text>
+  <!-- Pillar pills -->
+  <g transform="translate(58, 148)">
+    <!-- Simplicity -->
+    <rect x="0"   y="0" width="148" height="30" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <circle cx="15" cy="15" r="4" fill="#00dfc4" />
+    <text x="27" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#c9d1d9">⬡ Sadelik</text>
+    <text x="82" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#8b949e">/ Clean</text>
 
-    <!-- Pillar 2 -->
-    <rect x="150" y="0" width="145" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <circle cx="166" cy="16" r="4" fill="#58a6ff" />
-    <text x="178" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Güvenlik (Secure)</text>
+    <!-- Security -->
+    <rect x="162" y="0" width="148" height="30" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <circle cx="177" cy="15" r="4" fill="#58a6ff" />
+    <text x="189" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#c9d1d9">⬡ Güvenlik</text>
+    <text x="254" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#8b949e">/ Secure</text>
 
-    <!-- Pillar 3 -->
-    <rect x="310" y="0" width="145" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <circle cx="326" cy="16" r="4" fill="#a371f7" />
-    <text x="338" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Modernlik (Modern)</text>
+    <!-- Modernity -->
+    <rect x="324" y="0" width="148" height="30" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <circle cx="339" cy="15" r="4" fill="#a371f7" />
+    <text x="351" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#c9d1d9">⬡ Modernlik</text>
+    <text x="424" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#8b949e">/ Modern</text>
 
-    <!-- Pillar 4 -->
-    <rect x="470" y="0" width="155" height="32" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
-    <circle cx="486" cy="16" r="4" fill="#3fb950" />
-    <text x="498" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c9d1d9">Güçlü Yapı (Robust)</text>
+    <!-- Robust -->
+    <rect x="486" y="0" width="158" height="30" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1" />
+    <circle cx="501" cy="15" r="4" fill="#3fb950" />
+    <text x="513" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#c9d1d9">⬡ Güçlü Yapı</text>
+    <text x="596" y="20" font-family="'Segoe UI', sans-serif" font-size="11" fill="#8b949e">/ Robust</text>
   </g>
 
-  <!-- Border Frame -->
-  <rect x="0.5" y="0.5" width="899" height="239" rx="13.5" fill="none" stroke="#30363d" stroke-width="1" />
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="899" height="199" rx="11.5" fill="none" stroke="#21262d" stroke-width="1" />
 </svg>
